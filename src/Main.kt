@@ -2,30 +2,30 @@ import java.util.*
 import kotlin.random.Random
 
 fun main(args: Array<String>) {
-    var m = Array(4) { Array<Int>(4) { Random.nextInt(1, 9)} }
-    var sumaFilas = sumarFilas(m)
-    var sumaColum = Array(m[0].size){0}
+    var matriz = Array(4) { Array<Int>(4) { Random.nextInt(1, 9)} }
+    var sumaFilas = sumarFilas(matriz)
+    var sumaColum = Array(matriz[0].size){0}
 
 
-    for (f in m.indices){
-        for (c in m[f].indices){
-            print("${m[f][c]} ")
+    for (f in matriz.indices){
+        for (c in matriz[f].indices){
+            print("${matriz[f][c]} ")
         }
         println()
     }
-    var f: Int = 0
-    var c: Int = 0
+    var filas: Int = 0
+    var columnas: Int = 0
 
-    while (f < m.size){
-        while (c < m[0].size){
-            sumaFilas[f] += m[f][c]
-            c++
+    while (filas < matriz.size){
+        while (columnas < matriz[0].size){
+            sumaFilas[filas] += matriz[filas][columnas]
+            columnas++
         }
-        c = 0
-        f++
+        columnas = 0
+        filas++
     }
 
-    sumaColumnas(m,sumaColum)
+    sumaColumnas(matriz,sumaColum)
     println("La suma de las filas es")
     println(Arrays.toString(sumaFilas))
     println("La suma de las columnas es")
