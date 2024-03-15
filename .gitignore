@@ -1,0 +1,13 @@
+# Ignorar archivos de compilación
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignorar archivos temporales
+*.tmp
+*.log
+
+# Ignorar archivos de configuración local
+.env
+.DS_Store
